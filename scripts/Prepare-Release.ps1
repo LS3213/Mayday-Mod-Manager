@@ -1,16 +1,20 @@
 param(
-    [Parameter(Mandatory)] [string]$ManagerZip,
+    [string]$ManagerZip,
     [Parameter(Mandatory)] [string]$SavePackage,
+    [switch]$SaveOnly,
     [string]$OutputDirectory = (Join-Path (Split-Path $PSScriptRoot) 'dist')
 )
 
 $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path $PSScriptRoot
 $managerVersion = '1.2.6'
-$saveVersion = '0.6.42'
+$saveVersion = '0.6.44'
 $managerOut = Join-Path $OutputDirectory "manager-v$managerVersion"
 $saveOut = Join-Path $OutputDirectory "mayday-save-v$saveVersion"
-New-Item -ItemType Directory -Path $managerOut, $saveOut -Force | Out-Null
+New-Item -ItemType Directory -Path $saveOut -Force | Out-Null
+if (!$SaveOnly) {
+if (!$ManagerZip) { throw '需要 ManagerZip，或使用 SaveOnly 单独准备存档模组。' }
+New-Item -ItemType Directory -Path $managerOut -Force | Out-Null
 $managerTarget = Join-Path $managerOut "Mayday-MOD-Manager-$managerVersion.zip"
 if ([IO.Path]::GetFullPath($ManagerZip) -eq [IO.Path]::GetFullPath($managerTarget)) {
     throw '输入 ZIP 与发布输出不能是同一个文件。'
@@ -57,9 +61,12 @@ try {
     $inputArchive.Dispose()
     if (Test-Path -LiteralPath $temporary) { Remove-Item -LiteralPath $temporary }
 }
+}
 $saveTarget = Join-Path $saveOut "Mayday-Save-$saveVersion.maydaymod"
 Copy-Item -LiteralPath $SavePackage -Destination $saveTarget -Force
-foreach ($artifact in @($managerTarget, $saveTarget)) {
+$artifacts = @($saveTarget)
+if (!$SaveOnly) { $artifacts = @($managerTarget) + $artifacts }
+foreach ($artifact in $artifacts) {
     $hash = (Get-FileHash -LiteralPath $artifact -Algorithm SHA256).Hash.ToLowerInvariant()
     $line = "$hash  $(Split-Path $artifact -Leaf)`n"
     [IO.File]::WriteAllText((Join-Path (Split-Path $artifact) 'SHA256SUMS.txt'), $line, [Text.UTF8Encoding]::new($false))
