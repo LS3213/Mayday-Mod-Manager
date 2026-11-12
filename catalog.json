@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "description": "人工维护的模组发布目录，当前客户端不读取此文件或自动更新。",
+  "repository": "https://github.com/LS3213/Mayday-Mod-Manager",
+  "manager": {
+    "name": "Mayday 模组管理器",
+    "version": "1.2.6",
+    "author": "lansi",
+    "channel": "prerelease",
+    "tag": "manager-v1.2.6",
+    "download": "https://github.com/LS3213/Mayday-Mod-Manager/releases/download/manager-v1.2.6/Mayday-MOD-Manager-1.2.6.zip",
+    "sha256": "601a1e3618ab110a94de973883bd7fdb035f7a21ae5d7d55a8b64e8879b71c16",
+    "documentation": "docs/installation.md"
+  },
+  "mods": [
+    {
+      "id": "mayday-save",
+      "name": "存档管理",
+      "version": "0.6.42",
+      "author": "lansi",
+      "channel": "prerelease",
+      "tag": "mayday-save-v0.6.42",
+      "download": "https://github.com/LS3213/Mayday-Mod-Manager/releases/download/mayday-save-v0.6.42/Mayday-Save-0.6.42.maydaymod",
+      "sha256": "db541b2e09579c049312a67e661d9c9be223d61599fc06d84b903a2db7ff6d4f",
+      "documentation": "mods/mayday-save/README.md"
+    }
+  ]
+}

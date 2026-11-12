@@ -1,0 +1,12 @@
+/dist/
+*.zip
+*.maydaymod
+*.dll
+*.pdb
+*.log
+*.bak
+slot-*.json
+.env
+.env.*
+.vs/
+.vscode/
