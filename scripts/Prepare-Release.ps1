@@ -8,7 +8,7 @@ param(
 $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path $PSScriptRoot
 $managerVersion = '1.2.6'
-$saveVersion = '0.6.44'
+$saveVersion = '0.6.46'
 $managerOut = Join-Path $OutputDirectory "manager-v$managerVersion"
 $saveOut = Join-Path $OutputDirectory "mayday-save-v$saveVersion"
 New-Item -ItemType Directory -Path $saveOut -Force | Out-Null
