@@ -16,12 +16,12 @@
     {
       "id": "mayday-save",
       "name": "存档管理",
-      "version": "0.6.46",
+      "version": "0.6.52",
       "author": "lansi",
       "channel": "prerelease",
-      "tag": "mayday-save-v0.6.46",
-      "download": "https://github.com/LS3213/Mayday-Mod-Manager/releases/download/mayday-save-v0.6.46/Mayday-Save-0.6.46.maydaymod",
-      "sha256": "66499ab9c6329d8ee47e88bff1ac121825d1564ef0e93abbdf4c95d3f8b494aa",
+      "tag": "mayday-save-v0.6.52",
+      "download": "https://github.com/LS3213/Mayday-Mod-Manager/releases/download/mayday-save-v0.6.52/Mayday-Save-0.6.52.maydaymod",
+      "sha256": "9fa3b01eab2df6a3868076ff6c0ef150622b39e329bd0bb888a8469ee8237356",
       "documentation": "mods/mayday-save/README.md"
     }
   ]
