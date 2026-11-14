@@ -5,7 +5,7 @@
 | 产品 | 标签 | 附件 |
 | --- | --- | --- |
 | 管理器 | `manager-v1.2.6` | `Mayday-MOD-Manager-1.2.6.zip`、`SHA256SUMS.txt` |
-| 存档管理 | `mayday-save-v0.6.52` | `Mayday-Save-0.6.52.maydaymod`、`SHA256SUMS.txt` |
+| 存档管理 | `mayday-save-v0.6.54` | `Mayday-Save-0.6.54.maydaymod`、`SHA256SUMS.txt` |
 | 后续模组 | `<包ID>-v<版本>` | 对应 `.maydaymod`、`SHA256SUMS.txt` |
 
 版本页标题写清产品与版本；Release 正文包含适用环境、安装或升级步骤、主要变化和实际限制。当前两项按测试版发布。不要使用一个笼统的 `v1.0.0` 来表示所有模组版本。

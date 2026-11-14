@@ -4,7 +4,7 @@
 
 | ID | 名称 | 当前版本 | 作者 | 状态 | 页面 |
 | --- | --- | --- | --- | --- | --- |
-| `mayday-save` | 存档管理 | 0.6.52 | lansi | 测试版 | [说明与下载](mayday-save/README.md) |
+| `mayday-save` | 存档管理 | 0.6.54 | lansi | 测试版 | [说明与下载](mayday-save/README.md) |
 
 管理器自身版本：**1.2.6**，[下载管理器](https://github.com/LS3213/Mayday-Mod-Manager/releases/tag/manager-v1.2.6)。管理器本身不作为普通功能包导入。
 
